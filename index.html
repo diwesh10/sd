@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Research Digest | May 26, 2025</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --light-bg: #f8fafc;
+            --dark-text: #1e293b;
+            --gray-text: #64748b;
+            --border: #e2e8f0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: var(--dark-text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+        }
+        
+        header {
+            grid-column: 1 / -1;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            color: var(--primary);
+        }
+        
+        .date {
+            color: var(--gray-text);
+            font-size: 14px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            border-right: 1px solid var(--border);
+            padding-right: 20px;
+        }
+        
+        .filter-group {
+            margin-bottom: 25px;
+        }
+        
+        .filter-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .filter-option {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        /* Main Content */
+        .content {
+            display: grid;
+            gap: 25px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-title .toggle {
+            font-size: 14px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .story {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .story:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .story-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .story-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .meta {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--gray-text);
+        }
+        
+        .sector {
+            background: #e0e7ff;
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .impact-high {
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .impact-medium {
+            color: #d97706;
+            font-weight: 600;
+        }
+        
+        .story-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .analyst-insight {
+            background: var(--light-bg);
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        .insight-label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Research Digest</h1>
+            <div class="date">May 26, 2025</div>
+        </header>
+        
+        <aside class="sidebar">
+            <div class="filter-group">
+                <div class="filter-title">Analyst</div>
+                <label class="filter-option"><input type="checkbox" checked> Person 1</label>
+                <label class="filter-option"><input type="checkbox" checked> Person 2</label>
+            </div>
+            
+            <div class="filter-group">
+                <div class="filter-title">Sector</div>
+                <label class="filter-option"><input type="checkbox" checked> Banking & Finance</label>
+                <label class="filter-option"><input type="checkbox" checked> Pharmaceuticals</label>
+                <label class="filter-option"><input type="checkbox" checked> Automotive</label>
+                <label class="filter-option"><input type="checkbox" checked> Technology</label>
+                <label class="filter-option"><input type="checkbox" checked> Energy</label>
+                <label class="filter-option"><input type="checkbox" checked> Consumer Goods</label>
+                <label class="filter-option"><input type="checkbox" checked> Infrastructure</label>
+            </div>
+            
+            <div class="filter-group">
+                <div class="filter-title">Impact</div>
+                <label class="filter-option"><input type="checkbox" checked> High</label>
+                <label class="filter-option"><input type="checkbox" checked> Medium</label>
+                <label class="filter-option"><input type="checkbox" checked> Low</label>
+            </div>
+            
+            <div class="filter-group">
+                <div class="filter-title">Tags</div>
+                <div style="margin-top: 8px;">
+                    <span class="tag">M&A</span>
+                    <span class="tag">Regulation</span>
+                    <span class="tag">Earnings</span>
+                    <span class="tag">Policy</span>
+                    <span class="tag">Trade</span>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="content">
+            <section class="section">
+                <h2 class="section-title">Top Stories <span class="toggle">View All</span></h2>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">India-UK Free Trade Agreement Finalized</h3>
+                        <div class="meta">
+                            <span class="sector">Trade Policy</span>
+                            <span class="impact-high">High Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        The trade deal will make British Scotch whisky and cars cheaper in India while reducing duties on Indian garments and leather products. Bilateral trade projected to reach $120B by 2030. Indian workers in UK get 3-year social security exemption.
+                    </div>
+                    <div class="analyst-insight">
+                        <span class="insight-label">Person 1 Insight:</span>
+                        The deal's true test will be how UK's Carbon Border Adjustment Mechanism is handled for Indian exports.
+                    </div>
+                    <div class="analyst-insight">
+                        <span class="insight-label">Person 2 Insight:</span>
+                        Benefits to Indian companies and employees expected to exceed ₹4,000 crore, especially in IT sector.
+                    </div>
+                </div>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">MUFG in Talks to Buy 19% Stake in HDFC's NBFC Arm</h3>
+                        <div class="meta">
+                            <span class="sector">Banking</span>
+                            <span class="impact-high">High Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        Mitsubishi UFJ Financial Group in advanced talks to acquire 19% stake in HDB Financial Services for ~₹12,000 crore. Valuation has declined to $8-8.5B from $10-12B estimated previously.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Banking & Finance <span class="toggle">View All</span></h2>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">Bank of Baroda Q4 Results</h3>
+                        <div class="meta">
+                            <span class="sector">Public Sector Banks</span>
+                            <span class="impact-medium">Medium Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        Net profit rose 3.3% YoY to ₹5,048 crore. NIM contracted ~40bps due to elevated deposit costs. Guidance suggests NIM pressure may continue through September quarter.
+                    </div>
+                    <div class="analyst-insight">
+                        <span class="insight-label">Person 1 Highlight:</span>
+                        Bank has enabling provision to raise capital up to ₹7,500 crore over longer period to support 15% loan growth.
+                    </div>
+                </div>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">RBI Proposes Extended Call Money Market Hours</h3>
+                        <div class="meta">
+                            <span class="sector">Monetary Policy</span>
+                            <span class="impact-medium">Medium Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        RBI proposes extending trading hours from 5pm to 7pm to better serve real-time payment systems' liquidity needs. Currently banks face higher costs for after-hours liquidity needs.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Automotive & EV <span class="toggle">View All</span></h2>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">EV Sales Down 17.6% MoM in April</h3>
+                        <div class="meta">
+                            <span class="sector">Electric Vehicles</span>
+                            <span class="impact-medium">Medium Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        Total EV sales at 167,455 units, dragged down by stagnant sales across all segments except three-wheelers. Two-wheeler sales fell nearly 30% MoM though still up 40% YoY.
+                    </div>
+                </div>
+                
+                <div class="story">
+                    <div class="story-header">
+                        <h3 class="story-title">Ather Energy Enters 125-300cc Electric Motorcycle Space</h3>
+                        <div class="meta">
+                            <span class="sector">Two-Wheelers</span>
+                            <span class="impact-medium">Medium Impact</span>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        Ather plans to compete with Ola Electric in higher displacement segment. Received ARAI nod for lithium phosphate batteries which may help reduce costs.
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
